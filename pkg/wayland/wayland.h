@@ -66,6 +66,9 @@ void tablet_added(void *data, struct zwp_tablet_seat_v2 *zwp_tablet_seat_v2,
 void tool_added(void *data, struct zwp_tablet_seat_v2 *zwp_tablet_seat_v2,
                 struct zwp_tablet_tool_v2 *zwp_tablet_tool_v2);
 
+void pad_added(void *data, struct zwp_tablet_seat_v2 *zwp_tablet_seat_v2,
+               struct zwp_tablet_pad_v2 *zwp_tablet_pad_v2);
+
 void tablet_tool_removed(void *data, struct zwp_tablet_tool_v2 *id);
 
 void tablet_tool_down(void *data, struct zwp_tablet_tool_v2 *id,

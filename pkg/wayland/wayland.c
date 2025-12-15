@@ -398,9 +398,13 @@ void tool_added(void *data, struct zwp_tablet_seat_v2 *zwp_tablet_seat_v2,
   zwp_tablet_tool_v2_add_listener(tablet_tool, &tablet_tool_listener, NULL);
 }
 
+void pad_added(void *data, struct zwp_tablet_seat_v2 *zwp_tablet_seat_v2,
+               struct zwp_tablet_pad_v2 *zwp_tablet_pad_v2) {}
+
 static const struct zwp_tablet_seat_v2_listener tablet_seat_listener = {
-    .tool_added = tool_added,
     .tablet_added = tablet_added,
+    .tool_added = tool_added,
+    .pad_added = pad_added,
 };
 
 void touch_down(void *data, struct wl_touch *wl_touch, uint serial, uint time,
